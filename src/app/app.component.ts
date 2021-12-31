@@ -8,16 +8,16 @@ import { Router } from '@angular/router';
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	
-	title: string = 'proyecto para pruebas';
-	
+
+	public title: string = 'proyecto para pruebas';
+
 	constructor(
-		private router:Router
-		) {
-			console.log("Se inicio app-component");
-			
-		}
-	
+		private router: Router
+	) {
+		console.log("Se inicio app-component");
+
+	}
+
 	// public irEjemplo01(): void {
 	// 	this.router.navigate(['/ejemplo01']);
 	// }
