@@ -1,0 +1,43 @@
+<h2>Contador</h2>
+<div style="margin: 10px 20px">
+    <span style=" padding: 0 63px; border: 2px solid darkgreen;">{{contador}}</span>
+</div>
+
+<div style="margin: 10px 20px">
+    <button (click)="decrementar()">Restar 1</button>
+    <button (click)="incrementar()">Sumar 1</button>
+</div>
+
+<h2>Ingreso de nombres y muestra del mismo</h2>
+<div style="margin: 20px">
+    <p>Ingrese nombre <input type="text" [(ngModel)]="nombre" /></p>
+    <p>Ingrese apellido <input type="text" [(ngModel)]="apellido" /></p>
+    <p>Mostrar nombre y apellido: <b>{{nombre}}, {{apellido}}</b></p>
+</div>
+
+<h2>Administrar articulos</h2>
+<div>
+    <table border="1" *ngIf="hayRegistros(); else sinarticulos">
+        <tr>
+            <td>CODIGO</td><td>DESCRIPCION</td><td>PRECIO</td><td>BORRAR</td><td>SELECCIONAR</td>
+        </tr>
+        <tr *ngFor="let art of articulos">
+            <td>{{art.codigo}}</td>
+            <td>{{art.descripcion}}</td>
+            <td>{{art.precio}}</td>
+            <td><button (click)="borrar(art.codigo)">borrar</button></td>
+            <td><button (click)="seleccionar(art)">seleccionar</button></td>
+        </tr>
+    </table>
+    <ng-template #sinarticulos><p>No hay articulos.</p></ng-template>
+
+    <div>
+        <p> codigo:<input type="number" [(ngModel)]="art.codigo" /> </p>
+        <p> descripcion:<input type="text" [(ngModel)]="art.descripcion" /> </p>
+        <p> precio:<input type="number" [(ngModel)]="art.precio" /> </p>
+        <p> 
+            <button (click)="agregar()">Agregar</button> 
+            <button (click)="modificar()">Modificar</button> 
+        </p>
+    </div>
+</div>

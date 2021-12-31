@@ -1,0 +1,8 @@
+<h2>Mostrar datos y en pantalla</h2>
+<p>Nombre del empleado: <b class="empleado">{{nombre}}</b></p>
+<p>Edad: <b>{{edad}}</b></p>
+<p>Sueldo de los ultimos tres meses: <b>{{sueldos[0] | currency}}, {{sueldos[1] | currency}} y {{sueldos[2] | currency}}</b></p>
+<p>En los ultimos 3 meses a ganado: <b>{{ultimos3sueldos() | currency }}</b></p>
+<p><b>{{esActivo()}}</b></p>
+
+<p style="padding-top: 20px;">Puede visitar el sitio ingresando <a href="{{sitio}}">aquí</a></p>

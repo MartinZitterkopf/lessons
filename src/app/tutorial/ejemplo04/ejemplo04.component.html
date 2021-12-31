@@ -1,0 +1,27 @@
+<h2>Pasar datos de la componente hija a la componente padre</h2>
+<div style="text-align: center;">
+    <app-dado></app-dado>
+    <app-dado></app-dado>
+    <app-dado></app-dado>
+</div>
+
+<h2>Pasar datos de la componente padre a la componente hija</h2>
+
+<div style="text-align:center">
+    <app-nuevodado valor="{{valor1}}"></app-nuevodado>
+    <app-nuevodado valor="{{valor2}}"></app-nuevodado>
+    <app-nuevodado valor="{{valor3}}"></app-nuevodado>
+    <hr>
+    <button (click)="tirar()">Tirar</button>  
+    <hr>
+    <p>Resultado:{{resultado}}</p>
+</div>
+
+<h2>Disparo de eventos de la componente hija a la componente padre</h2>
+
+<div style="text-align:center">
+    <h1>Prueba de la componente cronometro</h1>
+    <app-cronometro [inicio]="0" (multiplo10)="actualizar($event)"></app-cronometro>
+    <h2>Evento</h2>
+    <h3>{{mensaje}}</h3>
+</div>
