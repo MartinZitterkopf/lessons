@@ -10,13 +10,13 @@ export class CronometroComponent implements OnInit, OnDestroy {
 
 	public segundos: number = 0;
 	@Input() inicio: number = 0;
-	@Output() multiplo10: EventEmitter<number>= new EventEmitter<number>();
+	@Output() multiplo10: EventEmitter<number> = new EventEmitter<number>();
 
 	//--------------------------------------------------------------------------------------
 
-	constructor() { 
+	constructor() {
 	}
-	
+
 	ngOnInit(): void {
 		this.segundos = this.inicio;
 
