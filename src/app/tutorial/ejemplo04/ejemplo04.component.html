@@ -29,11 +29,28 @@
 <h2>LLamar a metodos de la componente hija desde el template del padre</h2>
 
 <div style="text-align: center">
-    <h1>Aumentar o disminuir en 1 y fijar valor</h1>
+    <h1>Aumentar o disminuir en uno y fijar valor</h1>
     <app-selectornumerico [minimo]="1" [maximo]="10" #selector1></app-selectornumerico>
     <br>
     <button (click)="selector1.fijar(1)">Fijar en 1</button><br>
     <button (click)="selector1.fijar(5)">Fijar en 5</button><br>
     <button (click)="selector1.fijar(10)">Fijar en 10</button>
+</div>
+
+<h2>LLamar a metodos de la componente hija desde la clase padre</h2>
+
+<div style="text-align: center">
+    <h1>Aumentar o disminuir en uno y fijar valor</h1>
+    <app-selectornumerico2 [minimo]="1" [maximo]="10" #selector3></app-selectornumerico2>
+    <br>  
+    <button (click)="fijarSelector3(1)">Fijar en 1</button><br>
+    <button (click)="fijarSelector3(5)">Fijar en 5</button><br>
+    <button (click)="fijarSelector3(10)">Fijar en 10</button>
+    <hr>
+    <app-selectornumerico2 [minimo]="1" [maximo]="10" #selector2></app-selectornumerico2>    
+    <br>
+    <button (click)="fijarSelector2(1)">Fijar en 1</button><br>
+    <button (click)="fijarSelector2(5)">Fijar en 5</button><br>
+    <button (click)="fijarSelector2(10)">Fijar en 10</button>  
 </div>
 

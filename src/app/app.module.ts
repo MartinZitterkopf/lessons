@@ -12,6 +12,7 @@ import { DadoComponent } from './tutorial/ejemplo04/dado/dado.component';
 import { NuevodadoComponent } from './tutorial/ejemplo04/nuevodado/nuevodado.component';
 import { CronometroComponent } from './tutorial/ejemplo04/cronometro/cronometro.component';
 import { SelectornumericoComponent } from './tutorial/ejemplo04/selectornumerico/selectornumerico.component';
+import { Selectornumerico2Component } from './tutorial/ejemplo04/selectornumerico2/selectornumerico2.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SelectornumericoComponent } from './tutorial/ejemplo04/selectornumerico
     DadoComponent,
     NuevodadoComponent,
     CronometroComponent,
-    SelectornumericoComponent
+    SelectornumericoComponent,
+    Selectornumerico2Component
   ],
   imports: [
     BrowserModule,

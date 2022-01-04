@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ViewChild } from '@angular/core';
+import { Selectornumerico2Component } from './selectornumerico2/selectornumerico2.component';
 
 @Component({
 	selector: 'app-ejemplo04',
@@ -11,6 +12,10 @@ export class Ejemplo04Component implements OnInit {
 	public valor3: number;
 	public resultado: string = "";
 	public mensaje: string = "";
+//--------------------------------------------------------------------------------
+	@ViewChild('selector3') selector3!: Selectornumerico2Component;
+	@ViewChild('selector2') selector2!: Selectornumerico2Component;
+	
 
 	constructor() {
 		this.valor1 = this.retornarAleatorio();
@@ -37,6 +42,14 @@ export class Ejemplo04Component implements OnInit {
 	}
 
 	ngOnInit(): void {
+	}
+
+	fijarSelector3 (valor:number) {
+		this.selector3.fijar(valor);
+	}
+
+	fijarSelector2 (valor:number) {
+		this.selector2.fijar(valor);
 	}
 
 }
