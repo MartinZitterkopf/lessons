@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-	public title: string = 'proyecto para pruebas';
+	public title: string = 'proyecto tutorial';
 
 	constructor(
 		private router: Router

@@ -4,6 +4,7 @@ import { Ejemplo01Component } from './tutorial/ejemplo01/ejemplo01.component';
 import { Ejemplo02Component } from './tutorial/ejemplo02/ejemplo02.component';
 import { Ejemplo03Component } from './tutorial/ejemplo03/ejemplo03.component';
 import { Ejemplo04Component } from './tutorial/ejemplo04/ejemplo04.component';
+import { Ejemplo05Component } from './tutorial/ejemplo05/ejemplo05.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,12 @@ const routes: Routes = [
   {
     path: 'ejemplo04',
     component: Ejemplo04Component
-  }
+  },
+  {
+    path: 'ejemplo05',
+    component: Ejemplo05Component
+  },
+  
 ];
 
 @NgModule({

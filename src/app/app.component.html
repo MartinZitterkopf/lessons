@@ -4,10 +4,11 @@
     <button (click)="irA('ejemplo02')">02</button>
     <button (click)="irA('ejemplo03')">03</button>
     <button (click)="irA('ejemplo04')">04</button>
+    <button (click)="irA('ejemplo05')">05</button>
 </div>
 
 <h1 class="texto-titulo-prueba">
-	Bienvenido a {{title}}
+	<app-newdado [valor]="12"></app-newdado> <b>Bienvenido a {{title}}</b>
 </h1>
 
 <router-outlet></router-outlet>

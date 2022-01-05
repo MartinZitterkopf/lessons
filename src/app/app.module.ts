@@ -13,6 +13,10 @@ import { NuevodadoComponent } from './tutorial/ejemplo04/nuevodado/nuevodado.com
 import { CronometroComponent } from './tutorial/ejemplo04/cronometro/cronometro.component';
 import { SelectornumericoComponent } from './tutorial/ejemplo04/selectornumerico/selectornumerico.component';
 import { Selectornumerico2Component } from './tutorial/ejemplo04/selectornumerico2/selectornumerico2.component';
+import { Ejemplo05Component } from './tutorial/ejemplo05/ejemplo05.component';
+import { ListadoarticulosComponent } from './tutorial/ejemplo05/listadoarticulos/listadoarticulos.component';
+import { ElementosModule } from './elementos/elementos.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,12 +29,17 @@ import { Selectornumerico2Component } from './tutorial/ejemplo04/selectornumeric
     NuevodadoComponent,
     CronometroComponent,
     SelectornumericoComponent,
-    Selectornumerico2Component
+    Selectornumerico2Component,
+    Ejemplo05Component,
+    ListadoarticulosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ElementosModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
