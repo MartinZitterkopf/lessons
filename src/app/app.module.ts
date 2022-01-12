@@ -18,6 +18,9 @@ import { ListadoarticulosComponent } from './tutorial/ejemplo05/listadoarticulos
 import { ElementosModule } from './elementos/elementos.module';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ejemplo06Component } from './tutorial/ejemplo06/ejemplo06.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     Selectornumerico2Component,
     Ejemplo05Component,
     ListadoarticulosComponent,
+    Ejemplo06Component,
   ],
   imports: [
     BrowserModule,
@@ -40,8 +44,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ElementosModule,
     HttpClientModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

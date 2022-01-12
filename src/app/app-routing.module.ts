@@ -5,6 +5,7 @@ import { Ejemplo02Component } from './tutorial/ejemplo02/ejemplo02.component';
 import { Ejemplo03Component } from './tutorial/ejemplo03/ejemplo03.component';
 import { Ejemplo04Component } from './tutorial/ejemplo04/ejemplo04.component';
 import { Ejemplo05Component } from './tutorial/ejemplo05/ejemplo05.component';
+import { Ejemplo06Component } from './tutorial/ejemplo06/ejemplo06.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,10 @@ const routes: Routes = [
     path: 'ejemplo05',
     component: Ejemplo05Component
   },
-  
+  {
+    path: 'ejemplo06',
+    component: Ejemplo06Component
+  },
 ];
 
 @NgModule({
