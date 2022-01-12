@@ -17,6 +17,7 @@ import { Ejemplo05Component } from './tutorial/ejemplo05/ejemplo05.component';
 import { ListadoarticulosComponent } from './tutorial/ejemplo05/listadoarticulos/listadoarticulos.component';
 import { ElementosModule } from './elementos/elementos.module';
 import {HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ElementosModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
     
   ],
   providers: [],
