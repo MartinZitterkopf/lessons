@@ -1,14 +1,16 @@
+<h2>Calculadora, logica 01</h2>
+
 <div class="contenedor">
 
-    <mat-form-field>
-      <input matInput [(ngModel)]="valor1" type="number" placeholder="Ingrese primer valor">
-    </mat-form-field>
-  
-    <mat-form-field>
-        <input matInput [(ngModel)]="valor2" type="number" placeholder="Ingrese segundo valor">
-    </mat-form-field>
-    
-    <!-- <button mat-raised-button color="primary" (click)="sumar()">Sumar</button>
+	<mat-form-field>
+		<input matInput [(ngModel)]="valor1" type="number" placeholder="Ingrese primer valor">
+	</mat-form-field>
+
+	<mat-form-field>
+		<input matInput [(ngModel)]="valor2" type="number" placeholder="Ingrese segundo valor">
+	</mat-form-field>
+
+	<!-- <button mat-raised-button color="primary" (click)="sumar()">Sumar</button>
     <p>La suma de los dos valores es:{{resultado}}</p>
     
     <button mat-raised-button color="primary" (click)="restar()">restar</button>
@@ -20,16 +22,41 @@
     <button mat-raised-button color="primary" (click)="dividir()">dividir</button>
     <p>La division de los dos valores es:{{resultado}}</p> -->
 
-    <div style="display: flex;">
-        <button mat-raised-button style="margin: 0 5px;" color="primary" (click)="sumar()">Sumar</button>
-        <button mat-raised-button style="margin: 0 5px;"color="primary" (click)="restar()">restar</button>
-        <button mat-raised-button style="margin: 0 5px;" color="primary" (click)="multiplicar()">multiplicar</button>
-        <button mat-raised-button style="margin: 0 5px;"color="primary" (click)="dividir()">dividir</button> 
-        <div style="flex:1"></div>  
-        <button mat-raised-button style="margin: 0 5px;"color="warn" (click)="tipo= ''">reset</button>   
+	<div style="display: flex;">
+		<button mat-raised-button style="margin: 0 5px;" color="primary" (click)="sumar()">Sumar</button>
+		<button mat-raised-button style="margin: 0 5px;" color="primary" (click)="restar()">restar</button>
+		<button mat-raised-button style="margin: 0 5px;" color="primary" (click)="multiplicar()">multiplicar</button>
+		<button mat-raised-button style="margin: 0 5px;" color="primary" (click)="dividir()">dividir</button>
+		<div style="flex:1"></div>
+		<button mat-raised-button style="margin: 0 5px;" color="warn" (click)="tipo= ''">reset</button>
 
-    </div>
+	</div>
 
-    <p *ngIf="tipo != ''">La {{tipo}} de los dos valores es:{{resultado}}</p>
+	<p *ngIf="tipo != ''">La {{tipo}} de los dos valores es:{{resultado}}</p>
 
-  </div>
+</div>
+
+<h2>Calculadora, logica 02</h2>
+
+<div class="contenedor">
+
+	<mat-form-field>
+		<input matInput [(ngModel)]="valor10" type="number" placeholder="Ingrese primer valor">
+	</mat-form-field>
+
+	<mat-form-field>
+		<input matInput [(ngModel)]="valor20" type="number" placeholder="Ingrese segundo valor">
+	</mat-form-field>
+
+	<mat-radio-group name="opciones" [(ngModel)]="operacionSeleccionada">
+		<mat-radio-button *ngFor="let op of tipoOperaciones" name="opciones" [value]="op" style="margin: 10px">
+			{{op}}
+		</mat-radio-button>
+	</mat-radio-group>
+
+	<button mat-raised-button color="primary" (click)="operar()">Operar</button>
+	<button mat-raised-button color="warn" (click)="reset()">reset</button>
+
+	<p>El resultado es:{{resultado1}}</p>
+
+</div>
