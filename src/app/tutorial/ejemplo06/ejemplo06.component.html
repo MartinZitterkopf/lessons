@@ -1,4 +1,4 @@
-<h2>Calculadora, logica 01</h2>
+<h2>Calculadora simple, logica 01 mat-raised-button</h2>
 
 <div class="contenedor">
 
@@ -28,15 +28,15 @@
 		<button mat-raised-button style="margin: 0 5px;" color="primary" (click)="multiplicar()">multiplicar</button>
 		<button mat-raised-button style="margin: 0 5px;" color="primary" (click)="dividir()">dividir</button>
 		<div style="flex:1"></div>
-		<button mat-raised-button style="margin: 0 5px;" color="warn" (click)="tipo= ''">reset</button>
+		<button mat-raised-button style="margin: 0 5px;" color="warn" (click)="resetear()">reset</button>
 
 	</div>
 
-	<p *ngIf="tipo != ''">La {{tipo}} de los dos valores es:{{resultado}}</p>
+	<p *ngIf="tipo != null">La {{tipo}} de los dos valores es:{{resultado}}</p>
 
 </div>
 
-<h2>Calculadora, logica 02</h2>
+<h2>Calculadora simple, logica 02 mat-radio-group</h2>
 
 <div class="contenedor">
 
@@ -60,3 +60,25 @@
 	<p>El resultado es:{{resultado1}}</p>
 
 </div>
+
+<h2>Calculadora simple, logica 03 mat-checkbox</h2>
+
+<div class="contenedor">
+
+	<mat-form-field>
+	  <input matInput [(ngModel)]="valor100" type="number" placeholder="Ingrese primer valor">
+	</mat-form-field>
+  
+	<mat-form-field>
+		<input matInput [(ngModel)]="valor200" type="number" placeholder="Ingrese segundo valor">
+	</mat-form-field>
+	
+	<mat-checkbox [(ngModel)]="opcion1">Sumar</mat-checkbox>
+	<mat-checkbox [(ngModel)]="opcion2">Restar</mat-checkbox>
+	<mat-checkbox [(ngModel)]="opcion3">Multiplicar</mat-checkbox>
+	<mat-checkbox [(ngModel)]="opcion4">Dividir</mat-checkbox>
+  
+	<button mat-raised-button color="primary" (click)="operaracion()">Operar</button>
+	<p>{{resultado2}}</p>
+	
+  </div>

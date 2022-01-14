@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./ejemplo06.component.css']
 })
 export class Ejemplo06Component implements OnInit {
-	//ejemplo 1
-	public valor1=0;
-	public valor2=0;
-	public resultado=0;
-	public tipo:string = '';
 
-	//ejemplo 2
+	//variables utilizadas en ejemplo 1
+	public valor1!:number;
+	public valor2!:number;
+	public resultado!:number;
+	public tipo:string = null;
+
+	//variables utilizadas en ejemplo 2
 	public valor10!:number;
 	public valor20!:number;
 	public resultado1!:number;
@@ -25,11 +26,20 @@ export class Ejemplo06Component implements OnInit {
 		'division',
 	];
 
+	//variables utilizadas en ejemplo 3
+	public valor100!:number;
+	public valor200!:number;
+	public resultado2!:string;
+	public opcion1=false;
+	public opcion2=false;
+	public opcion3=false;
+	public opcion4=false;
+
 	constructor() { }
 
 	ngOnInit(): void { }
 
-	//ejemplo 1
+	//funciones utilizadas en ejemplo 1
 	sumar() {
 		this.tipo = 'suma';
 		this.resultado = this.valor1 + this.valor2;
@@ -50,7 +60,13 @@ export class Ejemplo06Component implements OnInit {
 		this.resultado = this.valor1 / this.valor2;
 	}
 
-	//ejemplo 2
+	public resetear(): void {
+		this.valor1 = null;
+		this.valor2 = null;
+		this.resultado = null;
+		this.tipo = null;
+	}
+	//funciones utilizadas en ejemplo 2
 	operar() {
 		switch (this.operacionSeleccionada) {
 		  case 'suma' : this.resultado1 = this.valor10 + this.valor20;
@@ -70,4 +86,26 @@ export class Ejemplo06Component implements OnInit {
 		this.operacionSeleccionada = '';
 		this.resultado1 = null;
 	}
+
+	//funciones utilizadas en ejemplo 3
+	operaracion() {
+		this.resultado2='';
+		if (this.opcion1) {
+		  let ope = this.valor100 + this.valor200;
+		  this.resultado2+=`La suma es ${ope} | `;
+		}
+		if (this.opcion2) {
+		  let ope = this.valor100 - this.valor200;
+		  this.resultado2+=`La resta es ${ope} | `;
+		}
+		if (this.opcion3) {
+		  let ope = this.valor100 * this.valor200;
+		  this.resultado2+=`El producto es ${ope} | `;
+		}
+		if (this.opcion4) {
+		  let ope = this.valor100 / this.valor200;
+		  this.resultado2+=`La division es ${ope} `;
+		}
+	  }
+
 }
