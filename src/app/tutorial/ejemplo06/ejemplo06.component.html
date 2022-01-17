@@ -82,3 +82,28 @@
 	<p>{{resultado2}}</p>
 	
   </div>
+
+  <h2>Calculadora simple, logica 04 mat-select</h2>
+
+  <div class="contenedor">
+
+	<mat-form-field>
+	  <input matInput [(ngModel)]="valor1000" type="number" placeholder="Ingrese primer valor">
+	</mat-form-field>
+  
+	<mat-form-field>
+		<input matInput [(ngModel)]="valor2000" type="number" placeholder="Ingrese segundo valor">
+	</mat-form-field>
+	
+	<mat-form-field>
+	  <mat-select placeholder="Operaciones" [(ngModel)]="seleccionada" name="operacion">
+		<mat-option *ngFor="let op of operaciones04" [value]="op.valor">
+		  {{op.muestraValor}}
+		</mat-option>
+	  </mat-select>
+	</mat-form-field>
+  
+	<button mat-raised-button color="primary" (click)="operar04()">Operar</button>
+	<p>El resultado es:{{resultado3}}</p>
+	
+  </div>  

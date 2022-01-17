@@ -35,9 +35,29 @@ export class Ejemplo06Component implements OnInit {
 	public opcion3=false;
 	public opcion4=false;
 
+	//variables utilizadas en ejemplo 4
+	public valor1000!:number;
+	public valor2000!:number;
+	public resultado3!:number;
+
+	public operaciones04 = [
+		{valor:'suma', muestraValor:'Sumar'},
+		{valor:'resta', muestraValor:'Restar'},
+		{valor:'multiplicacion', muestraValor:'Multiplicar'},
+		{valor:'division', muestraValor:'Dividir'}
+	];
+
+	public seleccionada: string = this.operaciones04[0].valor;
+
+	//------------------------------------------------------------
+
 	constructor() { }
 
+	//------------------------------------------------------------
+
 	ngOnInit(): void { }
+
+	//------------------------------------------------------------
 
 	//funciones utilizadas en ejemplo 1
 	sumar() {
@@ -107,5 +127,19 @@ export class Ejemplo06Component implements OnInit {
 		  this.resultado2+=`La division es ${ope} `;
 		}
 	  }
+
+	//funciones utilizadas en ejemplo 4
+	operar04(){
+		switch (this.seleccionada) {
+			case 'suma' : this.resultado3 = this.valor1000 + this.valor2000;
+					break;
+			case 'resta' : this.resultado3 = this.valor1000 - this.valor2000;
+					break;
+			case 'multiplicacion' : this.resultado3 = this.valor1000 * this.valor2000;
+					break;
+			case 'division' : this.resultado3 = this.valor1000 / this.valor2000;
+					break;
+		}
+	}
 
 }
