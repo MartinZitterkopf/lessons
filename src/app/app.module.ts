@@ -28,6 +28,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatBadgeModule } from '@angular/material/badge';
+import { Ejemplo07Component } from './tutorial/ejemplo07/ejemplo07.component';
+import { MatTabsModule } from '@angular/material/tabs';
+
+//-------------------------------------------------
 
 @NgModule({
   declarations: [
@@ -44,6 +48,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     Ejemplo05Component,
     ListadoarticulosComponent,
     Ejemplo06Component,
+    Ejemplo07Component,
   ],
   imports: [
     BrowserModule,
@@ -60,8 +65,10 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatSelectModule,
     MatSlideToggleModule,
     MatSliderModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatTabsModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
