@@ -16,17 +16,18 @@ import { Selectornumerico2Component } from './tutorial/ejemplo04/selectornumeric
 import { Ejemplo05Component } from './tutorial/ejemplo05/ejemplo05.component';
 import { ListadoarticulosComponent } from './tutorial/ejemplo05/listadoarticulos/listadoarticulos.component';
 import { ElementosModule } from './elementos/elementos.module';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Ejemplo06Component } from './tutorial/ejemplo06/ejemplo06.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import {MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { MatSliderModule } from '@angular/material/slider';
     MatCheckboxModule,
     MatSelectModule,
     MatSlideToggleModule,
-    MatSliderModule
+    MatSliderModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

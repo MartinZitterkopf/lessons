@@ -79,6 +79,7 @@
 	<mat-checkbox [(ngModel)]="opcion4">Dividir</mat-checkbox>
   
 	<button mat-raised-button color="primary" (click)="operaracion()">Operar</button>
+	<button mat-raised-button color="warn" (click)="reset3()">reset</button>
 	<p>{{resultado2}}</p>
 	
   </div>
@@ -104,8 +105,8 @@
 	</mat-form-field>
   
 	<button mat-raised-button color="primary" (click)="operar04()">Operar</button>
+	<button mat-raised-button color="warn" (click)="reset4()">reset</button>
 	<p>El resultado es:{{resultado3}}</p>
-	
   </div>  
 
   <h2>Calculadora simple, logica 05 mat-slide-toggle</h2>
@@ -126,14 +127,21 @@
 	<mat-slide-toggle [(ngModel)]="opcion40">Dividir</mat-slide-toggle>
   
 	<button mat-raised-button color="primary" (click)="operaracion1()">Operar</button>
+	<button mat-raised-button color="warn" (click)="reset5()">reset</button>
 	<p>{{resultado4}}</p>
 	
   </div>  
 
   <h2>Suma con slider, logica 06 mat-slider</h2>
 
-  <mat-slider [(ngModel)]="slider1" thumbLabel (change)="cambiar()" min="0" max="200"></mat-slider><br>
-  <mat-slider [(ngModel)]="slider2" thumbLabel (change)="cambiar()" min="0" max="200"></mat-slider><br>
-  <mat-slider [(ngModel)]="slider3" thumbLabel (change)="cambiar()" min="0" max="200"></mat-slider><br>
+  <mat-slider [(ngModel)]="slider1" thumbLabel (change)="cambiar()" min="0" max="200"></mat-slider>
+  <span [matBadge]="slider1" matBadgeOverlap="false"></span>
+  <br>
+  <mat-slider [(ngModel)]="slider2" thumbLabel (change)="cambiar()" min="0" max="200"></mat-slider>
+  <span [matBadge]="slider2" matBadgeOverlap="false"></span>
+  <br>
+  <mat-slider [(ngModel)]="slider3" thumbLabel (change)="cambiar()" min="0" max="200"></mat-slider>
+  <span [matBadge]="slider3" matBadgeOverlap="false"></span>
+  <br>
 
   La suma de los tres slider es:{{sumaSlider}}

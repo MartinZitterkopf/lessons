@@ -59,9 +59,9 @@ export class Ejemplo06Component implements OnInit {
 	public opcion40=false
 
 	//variables utilizadas en ejemplo 6
-	public slider1=0;
-	public slider2=0;
-	public slider3=0;
+	public slider1: number=0;
+	public slider2: number=0;
+	public slider3: number=0;
 	public sumaSlider=0;
 
 	//------------------------------------------------------------
@@ -143,6 +143,16 @@ export class Ejemplo06Component implements OnInit {
 		}
 	  }
 
+	  public reset3(): void {
+		this.valor100 = null;
+		this.valor200 = null;
+		this.resultado2 = null;
+		this.opcion1 = null;
+		this.opcion2 = null;
+		this.opcion3 = null;
+		this.opcion4 = null;
+	  }
+
 	//funciones utilizadas en ejemplo 4
 	operar04(){
 		switch (this.seleccionada) {
@@ -155,6 +165,12 @@ export class Ejemplo06Component implements OnInit {
 			case 'division' : this.resultado3 = this.valor1000 / this.valor2000;
 					break;
 		}
+	}
+
+	reset4() {
+		this.valor1000 = null;
+		this.valor2000 = null;
+		this.resultado3 = null;
 	}
 
 	//funciones utilizadas en ejemplo 5
@@ -177,6 +193,16 @@ export class Ejemplo06Component implements OnInit {
 		  this.resultado4+=`La division es ${ope} `;
 		}
 	  }	
+
+	  reset5() {
+		this.valor10000 = null;
+		this.valor20000 = null;
+		this.resultado4 = null;
+		this.opcion10 = null;
+		this.opcion20 = null;
+		this.opcion30 = null;
+		this.opcion40 = null;
+	  }
 
 	  //funciones utilizadas en ejemplo 6
 	  cambiar() {
