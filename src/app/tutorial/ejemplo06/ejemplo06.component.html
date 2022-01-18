@@ -130,6 +130,10 @@
 	
   </div>  
 
-  <h2>Calculadora simple, logica 06 mat-slider</h2>
+  <h2>Suma con slider, logica 06 mat-slider</h2>
 
-  
+  <mat-slider [(ngModel)]="slider1" thumbLabel (change)="cambiar()" min="0" max="200"></mat-slider><br>
+  <mat-slider [(ngModel)]="slider2" thumbLabel (change)="cambiar()" min="0" max="200"></mat-slider><br>
+  <mat-slider [(ngModel)]="slider3" thumbLabel (change)="cambiar()" min="0" max="200"></mat-slider><br>
+
+  La suma de los tres slider es:{{sumaSlider}}

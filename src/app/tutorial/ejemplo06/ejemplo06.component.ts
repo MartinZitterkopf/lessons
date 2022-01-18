@@ -58,6 +58,12 @@ export class Ejemplo06Component implements OnInit {
 	public opcion30=false;
 	public opcion40=false
 
+	//variables utilizadas en ejemplo 6
+	public slider1=0;
+	public slider2=0;
+	public slider3=0;
+	public sumaSlider=0;
+
 	//------------------------------------------------------------
 
 	constructor() { }
@@ -171,4 +177,9 @@ export class Ejemplo06Component implements OnInit {
 		  this.resultado4+=`La division es ${ope} `;
 		}
 	  }	
+
+	  //funciones utilizadas en ejemplo 6
+	  cambiar() {
+		  this.sumaSlider = this.slider1 + this.slider2 + this.slider3
+	  }
 }
