@@ -49,6 +49,15 @@ export class Ejemplo06Component implements OnInit {
 
 	public seleccionada: string = this.operaciones04[0].valor;
 
+	//variables utilizadas en ejemplo 5
+	public valor10000!:number;
+	public valor20000!:number;
+	public resultado4!:string;
+	public opcion10=false;
+	public opcion20=false;
+	public opcion30=false;
+	public opcion40=false
+
 	//------------------------------------------------------------
 
 	constructor() { }
@@ -142,4 +151,24 @@ export class Ejemplo06Component implements OnInit {
 		}
 	}
 
+	//funciones utilizadas en ejemplo 5
+	operaracion1() {
+		this.resultado4='';
+		if (this.opcion10) {
+		  let ope = this.valor10000 + this.valor20000;
+		  this.resultado4+=`La suma es ${ope} | `;
+		}
+		if (this.opcion20) {
+		  let ope = this.valor10000 - this.valor20000;
+		  this.resultado4+=`La resta es ${ope} | `;
+		}
+		if (this.opcion30) {
+		  let ope = this.valor10000 * this.valor20000;
+		  this.resultado4+=`El producto es ${ope} | `;
+		}
+		if (this.opcion40) {
+		  let ope = this.valor10000 / this.valor20000;
+		  this.resultado4+=`La division es ${ope} `;
+		}
+	  }	
 }
