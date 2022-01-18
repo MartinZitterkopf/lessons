@@ -107,3 +107,29 @@
 	<p>El resultado es:{{resultado3}}</p>
 	
   </div>  
+
+  <h2>Calculadora simple, logica 05 mat-slide-toggle</h2>
+
+  <div class="contenedor">
+
+	<mat-form-field>
+	  <input matInput [(ngModel)]="valor10000" type="number" placeholder="Ingrese primer valor">
+	</mat-form-field>
+  
+	<mat-form-field>
+		<input matInput [(ngModel)]="valor20000" type="number" placeholder="Ingrese segundo valor">
+	</mat-form-field>
+	
+	<mat-slide-toggle [(ngModel)]="opcion10">Sumar</mat-slide-toggle>
+	<mat-slide-toggle [(ngModel)]="opcion20">Restar</mat-slide-toggle>
+	<mat-slide-toggle [(ngModel)]="opcion30">Multiplicar</mat-slide-toggle>
+	<mat-slide-toggle [(ngModel)]="opcion40">Dividir</mat-slide-toggle>
+  
+	<button mat-raised-button color="primary" (click)="operaracion1()">Operar</button>
+	<p>{{resultado4}}</p>
+	
+  </div>  
+
+  <h2>Calculadora simple, logica 06 mat-slider</h2>
+
+  
