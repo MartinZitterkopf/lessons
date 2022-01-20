@@ -7,6 +7,7 @@ import { Ejemplo04Component } from './tutorial/ejemplo04/ejemplo04.component';
 import { Ejemplo05Component } from './tutorial/ejemplo05/ejemplo05.component';
 import { Ejemplo06Component } from './tutorial/ejemplo06/ejemplo06.component';
 import { Ejemplo07Component } from './tutorial/ejemplo07/ejemplo07.component';
+import { Ejemplo08Component } from './tutorial/ejemplo08/ejemplo08.component';
 
 //---------------------------------
 
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'ejemplo07',
     component: Ejemplo07Component
+  },
+  {
+    path: 'ejemplo08',
+    component: Ejemplo08Component
   },
 ];
 

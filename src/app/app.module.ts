@@ -30,6 +30,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatBadgeModule } from '@angular/material/badge';
 import { Ejemplo07Component } from './tutorial/ejemplo07/ejemplo07.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { Ejemplo08Component } from './tutorial/ejemplo08/ejemplo08.component';
+import { MatTableModule } from '@angular/material/table';
 
 //-------------------------------------------------
 
@@ -49,6 +51,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     ListadoarticulosComponent,
     Ejemplo06Component,
     Ejemplo07Component,
+    Ejemplo08Component,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatSlideToggleModule,
     MatSliderModule,
     MatBadgeModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule
   ],
   
   providers: [],
