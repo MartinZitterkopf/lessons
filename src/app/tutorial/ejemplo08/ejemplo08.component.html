@@ -1,4 +1,19 @@
 <h2> Ejemplo01, tabla de listado de articulos, utilizando componente mat-table</h2>
+<div class="contenedor">
+    <mat-form-field>
+        <input matInput [(ngModel)]="articuloselect.codigo" type="number" placeholder="Ingrese código">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="articuloselect.descripcion" type="text" placeholder="Ingrese descripción">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="articuloselect.precio" type="number" placeholder="Ingrese precio">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="agregar()">Agregar</button>
+</div>
 
 <table mat-table [dataSource]="datos01" class="mat-elevation-z8 tabla01" #tabla1>
     <ng-container matColumnDef="codigo">
@@ -29,25 +44,10 @@
     <tr mat-row *matRowDef="let row; columns: columnas01;"></tr>
 </table>
 
-<div class="contenedor">
-    <mat-form-field>
-        <input matInput [(ngModel)]="articuloselect.codigo" type="number" placeholder="Ingrese código">
-    </mat-form-field>
-
-    <mat-form-field>
-        <input matInput [(ngModel)]="articuloselect.descripcion" type="text" placeholder="Ingrese descripción">
-    </mat-form-field>
-
-    <mat-form-field>
-        <input matInput [(ngModel)]="articuloselect.precio" type="number" placeholder="Ingrese precio">
-    </mat-form-field>
-
-    <button mat-raised-button color="primary" (click)="agregar()">Agregar</button>
-</div>
-
+&nbsp;
 <h2>Ejemplo 02, listado, utilizando mat-table y mat-paginator</h2>
 <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla02" #tabla1>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla01" #tabla1>
   
       <ng-container matColumnDef="codigo">
         <th mat-header-cell *matHeaderCellDef> Código </th>
@@ -68,4 +68,29 @@
       <tr mat-row *matRowDef="let row; columns: columnas02;"></tr>
     </table>
     <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+  </div>
+
+  &nbsp;
+  <h2>Ejemplo 03, ordenar tablas, utilizando mat-table y matSort</h2>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8 tabla01" matSort>
+  
+      <ng-container matColumnDef="codigo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Código </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.codigo}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Descripción </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.descripcion}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="precio">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Precio </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.precio}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="columnas03"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnas03;"></tr>
+    </table>
   </div>

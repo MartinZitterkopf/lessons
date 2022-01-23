@@ -3,6 +3,8 @@ import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Articulo } from './models/articulo';
 import { MatPaginator } from '@angular/material/paginator';
 import { Articulo02 } from './models/articulo02';
+import { MatSort } from '@angular/material/sort';
+import { Articulo03 } from './models/articulo03';
 
 @Component({
 	selector: 'app-ejemplo08',
@@ -31,14 +33,24 @@ export class Ejemplo08Component implements OnInit {
 
 	@ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
+//variables utilizadas en ejemplo03
+	public columnas03: string[] = ['codigo', 'descripcion', 'precio'];
+	public datos03: Articulo03[] = [];
+	public dataSource1: any;
+	@ViewChild(MatSort, {static: true}) sort!: MatSort;
+
 	constructor() { }
 
 	ngOnInit(): void {
-		//funcion para ejemplo02 unicamente
+		//funcion para ejemplo02 y ejemplo03
 		for (let x = 1; x <= 100; x++)
 			this.datos02.push(new Articulo02 (x, `artículo ${x}`, Math.trunc(Math.random()*1000)));
 		this.dataSource = new MatTableDataSource <Articulo02> (this.datos02);
-		this.dataSource.paginator = this.paginator;
+		this.dataSource.paginator = this.paginator; //ejemplo02
+		for (let x3 = 1; x3 <= 10; x3++)
+			this.datos03.push(new Articulo03 (x3, `artículo ${x3}`, Math.trunc(Math.random()*100)));
+		this.dataSource1 = new MatTableDataSource <Articulo02> (this.datos03);
+		this.dataSource1.sort = this.sort; // ejemplo03
 	}
 
 //funciones utilizadas en ejemplo01	

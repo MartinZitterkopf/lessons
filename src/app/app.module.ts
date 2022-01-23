@@ -33,6 +33,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { Ejemplo08Component } from './tutorial/ejemplo08/ejemplo08.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 //-------------------------------------------------
 
@@ -72,7 +73,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatBadgeModule,
     MatTabsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule
   ],
   
   providers: [],
