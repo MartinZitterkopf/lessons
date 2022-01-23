@@ -32,6 +32,7 @@ import { Ejemplo07Component } from './tutorial/ejemplo07/ejemplo07.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Ejemplo08Component } from './tutorial/ejemplo08/ejemplo08.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 //-------------------------------------------------
 
@@ -70,7 +71,8 @@ import { MatTableModule } from '@angular/material/table';
     MatSliderModule,
     MatBadgeModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   
   providers: [],

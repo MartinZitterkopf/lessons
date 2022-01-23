@@ -1,5 +1,6 @@
-<table mat-table [dataSource]="datos" class="mat-elevation-z8 mi-estilo-tabla" #tabla1>
+<h2> Ejemplo01, tabla de listado de articulos, utilizando componente mat-table</h2>
 
+<table mat-table [dataSource]="datos01" class="mat-elevation-z8 tabla01" #tabla1>
     <ng-container matColumnDef="codigo">
         <th mat-header-cell *matHeaderCellDef> Código </th>
         <td mat-cell *matCellDef="let articulo"> {{articulo.codigo}} </td>
@@ -24,13 +25,11 @@
         </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
-    <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
-
+    <tr mat-header-row *matHeaderRowDef="columnas01"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnas01;"></tr>
 </table>
 
 <div class="contenedor">
-
     <mat-form-field>
         <input matInput [(ngModel)]="articuloselect.codigo" type="number" placeholder="Ingrese código">
     </mat-form-field>
@@ -44,5 +43,29 @@
     </mat-form-field>
 
     <button mat-raised-button color="primary" (click)="agregar()">Agregar</button>
-
 </div>
+
+<h2>Ejemplo 02, listado, utilizando mat-table y mat-paginator</h2>
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla02" #tabla1>
+  
+      <ng-container matColumnDef="codigo">
+        <th mat-header-cell *matHeaderCellDef> Código </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.codigo}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef> Descripción </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.descripcion}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="precio">
+        <th mat-header-cell *matHeaderCellDef> Precio </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.precio}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="columnas02"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnas02;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+  </div>

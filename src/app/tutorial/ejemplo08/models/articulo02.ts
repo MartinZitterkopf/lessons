@@ -1,4 +1,4 @@
-export class Articulo {
+export class Articulo02 {
     public codigo: number;
     public descripcion: string;
     public precio: number;
