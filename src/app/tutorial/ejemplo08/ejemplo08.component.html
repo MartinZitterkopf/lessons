@@ -1,5 +1,5 @@
 <h2> Ejemplo01, tabla de listado de articulos, utilizando componente mat-table</h2>
-
+<h3 style="text-align:center" > Cuadro para agregar articulos, primer opcion</h3>
 <div class="contenedor">
     <mat-form-field>
         <input matInput [(ngModel)]="articuloselect.codigo" type="number" placeholder="Ingrese código">
@@ -45,16 +45,19 @@
     <tr mat-row *matRowDef="let row; columns: columnas01;"></tr>
 </table>
 
+<h3> Cuadro emergente para agregar articulos, segunda opcion</h3>
+<button mat-raised-button (click)="abrirDialogo()">Agregar artículo</button>
+
 &nbsp;
 <h2>Ejemplo 02, listado, utilizando mat-table y mat-paginator</h2>
 
 <mat-form-field>
-    <mat-label>Buscar</mat-label>
-    <input matInput (keyup)="filtrar($event)" placeholder="buscar">
+  <mat-label>Buscar</mat-label>
+  <input matInput (keyup)="filtrar($event)" placeholder="buscar">
 </mat-form-field>
 
 <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla01" #tabla1>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla01" #tabla2>
   
       <ng-container matColumnDef="codigo">
         <th mat-header-cell *matHeaderCellDef> Código </th>

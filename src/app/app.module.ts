@@ -34,6 +34,8 @@ import { Ejemplo08Component } from './tutorial/ejemplo08/ejemplo08.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { DialogoarticuloComponent } from './tutorial/ejemplo08/dialogoarticulo/dialogoarticulo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 //-------------------------------------------------
 
@@ -54,6 +56,7 @@ import { MatSortModule } from '@angular/material/sort';
     Ejemplo06Component,
     Ejemplo07Component,
     Ejemplo08Component,
+    DialogoarticuloComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatTabsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDialogModule
   ],
   
   providers: [],
